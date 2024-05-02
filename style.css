@@ -1,89 +1,35 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #c8e6c9; /* Color de fondo verde claro */
+  background-color: #000000;
 }
-
 .container {
-  position: relative;
-}
-
-.sunflower {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  animation: spin 10s linear infinite; /* Animación de giro */
-}
-
-.petals {
+  height: 10em;
+  width: 45em;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background: #ffc107; /* Color de pétalos amarillo */
-  border-radius: 50%;
   transform: translate(-50%, -50%);
-}
-
-.petals:before,
-.petals:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: inherit;
-}
-
-.petals:before {
-  transform: rotate(45deg);
-}
-
-.petals:after {
-  transform: rotate(-45deg);
-}
-
-.face {
-  position: absolute;
-  top: 50%;
   left: 50%;
-  width: 50px;
-  height: 50px;
-  background: #fff; /* Color de la cara */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid #000; /* Color del borde de la cara */
-}
-
-.face:before {
-  content: "";
-  position: absolute;
   top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: #000; /* Color de los ojos */
-  border-radius: 50%;
+}
+.container h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 7.3em;
+  position: absolute;
+  line-height: 0;
+}
+.container img {
+  position: absolute;
+  width: 25em;
   transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  animation: spin 8s infinite linear;
 }
-
-.face .eye-left {
-  transform: translate(-25px, 0);
-}
-
-.face .eye-right {
-  transform: translate(25px, 0);
-}
-
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+.container h1:nth-child(3) {
+  color: transparent;
+  -webkit-text-stroke: 3px #ffffff;
 }
